@@ -53,7 +53,7 @@ function prompt_frendon_setup {
   # Set git-info parameters.
   zstyle ':prezto:module:git:info' verbose 'yes'
   zstyle ':prezto:module:git:info:branch' format '%F{green}%b%f'
-  zstyle ':prezto:module:git:info:clean' format '%F{green}✔%b%f'
+  zstyle ':prezto:module:git:info:clean' format '%F{green}%b%f'
   zstyle ':prezto:module:git:info:dirty' format '%%B%F{yellow}✗%f%%b'
   zstyle ':prezto:module:git:info:keys' format \
     'prompt' ' %F{blue}(%f$(coalesce "%b" "%p" "%c")${git_info[rprompt]}%s%F{green}%f%F{blue})%f%s' \
@@ -61,7 +61,7 @@ function prompt_frendon_setup {
     #'rprompt' '%A%B%S%a%d%m%r%U%u'
 
   # Define prompts.
-  PROMPT='%(?:%B%F{green}➜%f%b:%F{red}➜%f%b)  %F{cyan}${_prompt_frendon_pwd}%f${git_info:+${(e)git_info[prompt]}}${editor_info[keymap]} '
+  PROMPT='%(?:%B%F{green}➜%f%b:%F{red}➜%f%b) %F{cyan}${_prompt_frendon_pwd}%f${git_info:+${(e)git_info[prompt]}}${editor_info[keymap]} '
   # RPROMPT='${editor_info[overwrite]}%(?:: %F{red}⏎%f)${VIM:+" %B%F{green}V%f%b"}${git_info[rprompt]}'
   RPROMPT=''
   SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
